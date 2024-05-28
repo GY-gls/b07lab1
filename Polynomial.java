@@ -11,8 +11,8 @@ public class Polynomial{
 	
 	//constructors
 	public Polynomial() {
-		nonZeroCoeff = new double[0];
-		exponents = new int[0];
+		nonZeroCoeff = null;
+		exponents = null;
 	}
 	
 	public Polynomial(double[] coeff, int[] exp) {
