@@ -103,6 +103,10 @@ public class Polynomial{
 		double[] newCoeff = new double[coeff.length - countZero];
 		int[] exp = new int[newCoeff.length];
 		
+		if(newCoeff.length == 0) {
+			return new Polynomial();
+		}
+			
 		int index = 0;
 		int deg = 0;
 		for(double currCoeff : coeff) {
