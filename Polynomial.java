@@ -1,4 +1,5 @@
- import java.io.File;
+
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -117,7 +118,7 @@ public class Polynomial{
 			}
 		}
 		
-		// return resulting polynomial whose coefficients and exponent arrays are sorted
+		
 		return new Polynomial(newCoeff, newExp);
 	}
 	

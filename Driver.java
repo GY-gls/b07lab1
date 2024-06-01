@@ -4,7 +4,6 @@ public class Driver {
 	
 	public static void main(String [] args) {
 		
-		
 		Polynomial p0 = new Polynomial();
 		printCoeffArray(p0.nonZeroCoeff);
 		printExpArray(p0.exponents);
@@ -45,7 +44,7 @@ public class Driver {
 		Polynomial sum3 = p5.add(p6);
 		printCoeffArray(sum3.nonZeroCoeff);
 		printExpArray(sum3.exponents);
-		
+
 		// testing two polynomials that sum to zero
 		double[] c7 = {1, 2, 3};
 		int[] e7 = {0, 4, 8};
@@ -56,8 +55,7 @@ public class Driver {
 		Polynomial sum4 = p7.add(p8);
 		printCoeffArray(sum4.nonZeroCoeff);
 		printExpArray(sum4.exponents);
-		
-		
+
 		// testing method evaluate --------------------------------------------------------------------------------
 		System.out.println("sum2(0.1) = " + sum2.evaluate(0.1)); // arrays sorted
 		System.out.println("p1(3.5) = " + p1.evaluate(3.5)); // arrays unsorted
