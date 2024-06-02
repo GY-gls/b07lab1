@@ -55,6 +55,12 @@ public class Driver {
 		Polynomial sum4 = p7.add(p8);
 		printCoeffArray(sum4.nonZeroCoeff);
 		printExpArray(sum4.exponents);
+		
+		Polynomial abc = p7.add(sum4);
+		printCoeffArray(abc.nonZeroCoeff);
+		System.out.println(sum4.hasRoot(183745));
+		Polynomial zero = sum4.multiply(p8);
+		System.out.println(zero.exponents == null);
 
 		// testing method evaluate --------------------------------------------------------------------------------
 		System.out.println("sum2(0.1) = " + sum2.evaluate(0.1)); // arrays sorted

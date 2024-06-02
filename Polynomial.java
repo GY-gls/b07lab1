@@ -62,6 +62,13 @@ public class Polynomial{
 	//methods
 	public Polynomial add(Polynomial p) {
 		
+		if(this.exponents == null) {
+			return p;
+		}
+		if(p.exponents == null) {
+			return this;
+		}
+		
 		int totalLen = this.exponents.length + p.exponents.length;
 		double[] coeff = new double[totalLen];
 		int[] exp = new int[totalLen];
@@ -92,7 +99,6 @@ public class Polynomial{
 			}		
 		}
 		
-		
 		//determine where zero coefficients occur
 		int countZero = 0;
 		for(int i = 0; i < index; i++) {
@@ -117,14 +123,18 @@ public class Polynomial{
 				newIndex++;
 			}
 		}
-		
-		
+				
 		return new Polynomial(newCoeff, newExp);
 	}
 	
 	public double evaluate(double x) {	
 		
-		double result = 0.0;	
+		double result = 0.0;
+		
+		if(this.exponents == null) {
+			return result;
+		}
+			
 		for(int i = 0; i < nonZeroCoeff.length; i++) {
 			result += nonZeroCoeff[i] * Math.pow(x, exponents[i]);
 		}
@@ -138,6 +148,10 @@ public class Polynomial{
 	}
 	
 	public Polynomial multiply(Polynomial p) {
+		
+		if(this.exponents == null || p.exponents == null) {
+			return new Polynomial();
+		}
 		
 		double[] coeff = new double[this.exponents.length];
 		int[] exp = new int[this.exponents.length]; 
