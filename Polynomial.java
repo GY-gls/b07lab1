@@ -162,6 +162,15 @@ public class Polynomial{
 	
 	public void saveToFile(String fileName) {
 		
+		try {
+		PrintStream output = new PrintStream(fileName);
+		
+		if(exponents == null) {
+			output.append("0");
+			output.close();
+			return;
+		}
+		
 		String polyStr = "";
 		
 		for(int i = 0; i < exponents.length; i++) {
@@ -181,9 +190,7 @@ public class Polynomial{
 		if(polyStr.charAt(0) == '+') {
 			polyStr = polyStr.substring(1, polyStr.length());
 		}
-		
-		try {
-			PrintStream output = new PrintStream(fileName);
+
 			output.append(polyStr);
 			output.close();
 		} catch (FileNotFoundException e) {

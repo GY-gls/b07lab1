@@ -85,7 +85,7 @@ public class Driver {
 		
 		// testing method saveToFile --------------------------------------------------------------------------------
 		p3.saveToFile("text.txt");
-		p4.saveToFile("text.txt");
+		sum4.saveToFile("text.txt");
 		
 		// testing polynomial constructor that accepts a file --------------------------------------------------------
 		Polynomial poly = new Polynomial(new File("text.txt"));
